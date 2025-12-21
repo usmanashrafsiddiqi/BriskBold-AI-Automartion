@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* HEADINGS */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Antonio", sans-serif;
+}
+
+/* PARAGRAPHS */
+p {
+  font-family: "Montserrat", sans-serif;
+}
+.heading-primary {
+  font-family: "Antonio", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 51.15px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: #0ea5e9;  /* text-sky-400 */
+  text-align: center;
+}
+.paragraph-primary {
+  font-family: "Creato Display", sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 51.15px;
+  letter-spacing: 0;
+  color: white;
+}
