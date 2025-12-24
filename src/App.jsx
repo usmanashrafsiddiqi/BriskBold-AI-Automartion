@@ -13,6 +13,8 @@ import SoftwareDevelopment from "./components/SoftwareDevelopment";
 import LowCode from "./components/LowCode";
 import HyperAutomation from "./components/HyperAutomation";
 import Blogs from "./components/Blogs";
+import Job from "./components/Job";
+import Footer from "./components/Footer";
 
 function App() {
   const { startListening } = useVoice();
@@ -66,11 +68,15 @@ solute inset-0 bg-black/50"></div>
   <section id="event">
           <Event />
         </section>
-       
+       <section id="job">
+          <Job />
+        </section>
         <section id="contact">
           <Contact />
         </section>
-       
+       <section id="contact">
+          <Footer />
+        </section>
       </div>
     </div>
   );
