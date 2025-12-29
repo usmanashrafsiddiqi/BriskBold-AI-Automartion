@@ -16,23 +16,23 @@ const Event = () => {
       image: "/event.jpg",
     },
     {
-      title: "AI Convergence 2025: Shaping Intelligent Systems",
+      title: "AI Future Horizons Summit 2025",
       description:
-        "Experience a full-day immersive event with innovators and engineers redefining automation, AI workflows, and smart decision systems.",
-      date: "Jun 22, 2025",
-      time: "10:00 AM – 6:00 PM",
-      location: "Online",
-      attendees: "600+",
+        "Dive into the possibilities of AI-driven transformation across industries with keynote speakers worldwide.",
+      date: "Jul 10, 2025",
+      time: "11:00 AM – 5:00 PM",
+      location: "Hybrid",
+      attendees: "950+",
       image: "/event.jpg",
     },
     {
-      title: "AI Convergence 2025: Shaping Intelligent Systems",
+      title: "Automation Excellence Workshop",
       description:
-        "Experience a full-day immersive event with innovators and engineers redefining automation, AI workflows, and smart decision systems.",
-      date: "Jun 22, 2025",
-      time: "10:00 AM – 6:00 PM",
+        "A focused session on workflow engineering and AI system optimization for modern teams.",
+      date: "Aug 15, 2025",
+      time: "1:00 PM – 6:00 PM",
       location: "Online",
-      attendees: "600+",
+      attendees: "700+",
       image: "/event.jpg",
     },
   ];
@@ -49,23 +49,23 @@ const Event = () => {
       image: "/pastevent.jpg",
     },
     {
-      title: "AI Convergence 2024: Intelligent Automation",
+      title: "Automation & AI Leadership Forum 2024",
       description:
-        "A successful past event focused on enterprise AI, automation frameworks, and future-ready solutions.",
-      date: "Jun 18, 2024",
-      time: "9:00 AM – 5:00 PM",
-      location: "Online",
-      attendees: "800+",
+        "Leaders gathered to discuss scalable AI implementation strategies and transformation roadmaps.",
+      date: "Oct 21, 2024",
+      time: "10:00 AM – 6:00 PM",
+      location: "Dubai",
+      attendees: "900+",
       image: "/pastevent.jpg",
     },
     {
-      title: "AI Convergence 2024: Intelligent Automation",
+      title: "Neural Intelligence Expo 2024",
       description:
-        "A successful past event focused on enterprise AI, automation frameworks, and future-ready solutions.",
-      date: "Jun 18, 2024",
-      time: "9:00 AM – 5:00 PM",
-      location: "Online",
-      attendees: "800+",
+        "A tech-forward event exploring machine learning ecosystems and human-AI collaboration.",
+      date: "Dec 5, 2024",
+      time: "12:00 PM – 7:00 PM",
+      location: "Singapore",
+      attendees: "1,100+",
       image: "/pastevent.jpg",
     },
   ];
@@ -180,8 +180,11 @@ const Event = () => {
                   </div>
                 </div>
 
+                {/* BUTTON TEXT CHANGES HERE */}
                 <button className="mt-6 self-start px-6 py-2 rounded-md bg-gradient-to-r from-sky-400 to-blue-500 text-black text-sm font-medium hover:opacity-90 transition">
-                  Register Now →
+                  {activeTab === "upcoming"
+                    ? "Coming Soon"
+                    : "Check Recap"}
                 </button>
               </div>
             </div>

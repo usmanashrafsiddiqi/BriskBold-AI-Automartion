@@ -53,7 +53,7 @@ solute inset-0 bg-black/50"></div>
           <Services />
         </section>
 
-        <section id="customers">
+        <section id="">
           <Customer />
         </section>
 
@@ -74,7 +74,7 @@ solute inset-0 bg-black/50"></div>
         <section id="contact">
           <Contact />
         </section>
-       <section id="contact">
+       <section id="">
           <Footer />
         </section>
       </div>

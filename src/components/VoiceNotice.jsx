@@ -35,9 +35,14 @@ const VoiceNotice = ({ onEnable }) => {
           </p>
 
           {/* Mic icon */}
-          <div className="mt-6 w-20 h-20 rounded-full bg-[#183760] flex items-center justify-center shadow-inner">
-            <span className="text-white text-4xl">🎤</span>
-          </div>
+         {/* Mic icon (custom image) */}
+<div className="mt-6 w-20 h-20 rounded-full bg-[#183760] flex items-center justify-center shadow-inner overflow-hidden">
+  <img
+    src="/mic.png"
+    alt="Microphone"
+    className="w-12 h-12 object-contain"
+  />
+</div>
 
           {/* Examples */}
           <p className="text-[#9EC3FF] text-xs mt-5 leading-relaxed">
