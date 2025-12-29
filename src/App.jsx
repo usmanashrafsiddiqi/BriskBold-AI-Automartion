@@ -15,6 +15,8 @@ import HyperAutomation from "./components/HyperAutomation";
 import Blogs from "./components/Blogs";
 import Job from "./components/Job";
 import Footer from "./components/Footer";
+import FluidCursor from "./components/FluidCursor";
+import SplashCursor from "./components/SplashCursor";
 
 function App() {
   const { startListening } = useVoice();
@@ -29,56 +31,36 @@ function App() {
     bg-cover
     bg-center
     bg-no-repeat
-
     bg-[url('/mob1.webp')]
-    md:bg-[url('/main4.webp')]
-    md:bg-fixed
+    md:bg-[url('/newbgdes.webp')]
+    bg-fixed
   "
 >
+  {/* <FluidCursor /> */}
+  <SplashCursor />
 
-      {/* Dark overlay (important for readability) */}
-      <div className="abimport SoftwareDevelopment from './components/SoftwareDevelopment';
-solute inset-0 bg-black/50"></div>
+  {/* Dark overlay */}
+  <div className="absolute inset-0 bg-black/50"></div>
 
-      {/* Website Content */}
-      <div className="relative z-10">
-        <VoiceNotice onEnable={startListening} />
-        <Navbar />
-
-        <section id="home">
-          <Hero />
-        </section>
-
-        <section id="services">
-          <Services />
-        </section>
-
-        <section id="">
-          <Customer />
-        </section>
-
-        <section id="about">
-          <About />
-        </section>
-         <Blogs/>
-        <Partners/>
-      <SoftwareDevelopment/>
-      <LowCode/>
-      <HyperAutomation/>
-  <section id="event">
-          <Event />
-        </section>
-       <section id="job">
-          <Job />
-        </section>
-        <section id="contact">
-          <Contact />
-        </section>
-       <section id="">
-          <Footer />
-        </section>
-      </div>
-    </div>
+  {/* Website content */}
+  <div className="relative z-10">
+    <VoiceNotice onEnable={startListening} />
+    <Navbar />
+    <section id="home"><Hero /></section>
+    <section id="services"><Services /></section>
+    <section><Customer /></section>
+    <section id="about"><About /></section>
+    <Blogs />
+    <Partners />
+    <SoftwareDevelopment />
+    <LowCode />
+    <HyperAutomation />
+    <section id="event"><Event /></section>
+    <section id="job"><Job /></section>
+    <section id="contact"><Contact /></section>
+    <section><Footer /></section>
+  </div>
+</div>
   );
 }
 
