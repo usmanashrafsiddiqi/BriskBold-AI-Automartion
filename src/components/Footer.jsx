@@ -141,7 +141,7 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>Email: info@briskbold.com</li>
-              <li>Phone: (+97) 55432733</li>
+              <li>Phone: (+97) 554372731</li>
               <li>Address: Business Bay, Dubai, UAE</li>
             </ul>
           </div>
