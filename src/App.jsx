@@ -17,6 +17,7 @@ import Job from "./components/Job";
 import Footer from "./components/Footer";
 import FluidCursor from "./components/FluidCursor";
 import SplashCursor from "./components/SplashCursor";
+import YouTubeResource from './components/YouTubeResource';
 
 function App() {
   const { startListening } = useVoice();
@@ -50,6 +51,8 @@ function App() {
     <section id="services"><Services /></section>
     <section><Customer /></section>
     <section id="about"><About /></section>
+    <section id="resources"><YouTubeResource /></section>
+    
     <Blogs />
     <Partners />
     <SoftwareDevelopment />

@@ -39,7 +39,7 @@ const Navbar = () => {
           {[
             { id: "home", label: "HOME" },
             { id: "services", label: "SERVICES" },
-            { id: "customers", label: "RESOURCES" },
+            { id: "resources", label: "RESOURCES" },
             { id: "about", label: "ABOUT" },
             { id: "contact", label: "CONTACT US" },
           ].map((item) => {

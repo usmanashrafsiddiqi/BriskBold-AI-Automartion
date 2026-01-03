@@ -1,0 +1,95 @@
+.yt-container{
+  width:100%;
+  text-align:center;
+  padding:80px 0;
+  background: radial-gradient(#0b182c,#020712);
+  color:white;
+}
+
+.yt-title{
+  border:1px solid #4db4ff;
+  padding:8px 24px;
+  border-radius:8px;
+  margin-bottom:50px;
+  display:inline-block;
+  letter-spacing:1px;
+}
+
+/* MAIN LAYOUT */
+.yt-carousel{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:40px;                 /* ensures arrows visible */
+  min-height:360px;
+}
+
+.yt-cards{
+  position:relative;
+  width:700px;
+  height:340px;
+  perspective:1000px;
+}
+
+/* CARD */
+.yt-card{
+  position:absolute;
+  top:0;
+  left:50%;
+  width:260px;
+  height:320px;
+  margin-left:-130px;
+  border-radius:20px;
+  overflow:hidden;
+  transition:all .35s ease;
+  box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+
+/* INNER FOR HOVER — prevents shaking */
+.yt-inner{
+  width:100%;
+  height:100%;
+  transition:transform .35s ease, box-shadow .35s ease;
+}
+
+/* hover only scales inner */
+.yt-card:hover .yt-inner{
+  transform:scale(1.08);
+  box-shadow:0 25px 60px rgba(0,180,255,.5);
+}
+
+/* IMAGES */
+.yt-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* ARROWS */
+.yt-arrow{
+  position:relative;
+  z-index:9999;
+  background:rgba(0,0,0,0.6);
+  border:2px solid #4db4ff;
+  color:white;
+  font-size:32px;
+  padding:12px 18px;
+  border-radius:50%;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.yt-arrow:hover{
+  background:#4db4ff;
+  box-shadow:0 0 20px #4db4ff;
+}
+
+.left{ margin-right:0px; }
+.right{ margin-left:0px; }
+
+/* TITLE BELOW */
+.yt-caption{
+  margin-top:30px;
+  color:#cfe7ff;
+  font-size:18px;
+}
