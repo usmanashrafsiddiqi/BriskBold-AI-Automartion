@@ -24,7 +24,7 @@ const YouTubeResource = () => {
   return (
     <div id="resouces" className="yt-container">
 
-      <h2 className="yt-title">YOUTUBE RESOURCE</h2>
+      <h2 className="yt-title heading-primary">YOUTUBE RESOURCE</h2>
 
       <div className="yt-carousel">
 

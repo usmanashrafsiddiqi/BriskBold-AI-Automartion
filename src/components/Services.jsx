@@ -43,7 +43,7 @@ const Services = () => {
   return (
     <section className=" relative">
       {/* Heading */}
-      <div className="text-center mb-16">
+      <div className="text-center mb-8">
       <h3
   className=" heading-primary"
   

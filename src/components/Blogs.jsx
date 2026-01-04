@@ -7,7 +7,7 @@ const Blogs = () => {
 
   return (
     <>
-      <section className="py-20">
+      <section className="py-8">
         <div className="max-w-7xl mx-auto px-6">
 
           <div className="text-center mb-16">

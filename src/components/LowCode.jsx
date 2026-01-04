@@ -1,15 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const LowCode = () => {
   const logos = ["/low1.jpg","/low2.jpg","/low3.jpg","/low4.jpg","/low5.jpg"];
 
+  const [start, setStart] = useState(0);
+
+  const visibleLogos = [
+    logos[start % logos.length],
+    logos[(start + 1) % logos.length],
+    logos[(start + 2) % logos.length],
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setStart(prev => prev + 3);
+    }, 3000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <section className="py-20">
+    <section className="py-8">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="heading-primary py-10">Low Code Expertise</h2>
+        <h2 className="heading-primary py-4">Low Code Expertise</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 place-items-center">
-          {logos.map((logo, i) => (
+
+          {visibleLogos.map((logo, i) => (
             <div
               key={i}
               style={{
@@ -36,6 +53,7 @@ const LowCode = () => {
               />
             </div>
           ))}
+
         </div>
       </div>
     </section>

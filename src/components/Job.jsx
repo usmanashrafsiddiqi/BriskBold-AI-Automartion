@@ -40,12 +40,12 @@ const Job = () => {
   const [selectedJob, setSelectedJob] = useState(null);
 
   return (
-    <section className="py-20">
+    <section className="py-8 ">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* ---- SAME UI ---- */}
         <div className="text-center mb-14">
-          <span className="inline-block px-6 py-2 text-sky-400 border border-sky-400/40 rounded-md text-sm tracking-widest mb-4">
+          <span className="inline-block px-6 py-2 text-sky-400 border border-sky-400/40 rounded-md text-sm tracking-widest mb-4 heading-primary">
             JOIN OUR TEAM
           </span>
 
