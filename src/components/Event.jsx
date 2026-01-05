@@ -5,6 +5,8 @@ const Event = () => {
   const [activeTab, setActiveTab] = useState("past");
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [slideIndex, setSlideIndex] = useState(0);
+  const [pageIndex, setPageIndex] = useState(0);
+  const eventsPerPage = 3;
 
   const upcomingEvents = [
     {
@@ -132,13 +134,16 @@ const Event = () => {
     },
   ];
 
-  const eventsToShow =
-    activeTab === "upcoming" ? upcomingEvents : pastEvents;
+   const eventsToShow = activeTab === "upcoming" ? upcomingEvents : pastEvents;
 
- return (
+  // Slice the events for pagination
+  const start = pageIndex * eventsPerPage;
+  const end = start + eventsPerPage;
+  const currentEvents = eventsToShow.slice(start, end);
+
+  return (
     <section className="py-24">
       <div className="max-w-6xl mx-auto px-6">
-
         {/* Heading */}
         <div className="text-center mb-10">
           <span className="heading-primary py-10">Events & Workshops</span>
@@ -152,22 +157,14 @@ const Event = () => {
         <div className="flex justify-center mb-12">
           <div className="bg-white/5 border border-white/10 rounded-full p-1 flex gap-1">
             <button
-              onClick={() => setActiveTab("upcoming")}
-              className={`px-6 py-2 rounded-full text-sm transition ${
-                activeTab === "upcoming"
-                  ? "bg-sky-400 text-black"
-                  : "text-gray-300"
-              }`}
+              onClick={() => { setActiveTab("upcoming"); setPageIndex(0); }}
+              className={`px-6 py-2 rounded-full text-sm transition ${activeTab === "upcoming" ? "bg-sky-400 text-black" : "text-gray-300"}`}
             >
               Upcoming Events
             </button>
             <button
-              onClick={() => setActiveTab("past")}
-              className={`px-6 py-2 rounded-full text-sm transition ${
-                activeTab === "past"
-                  ? "bg-sky-400 text-black"
-                  : "text-gray-300"
-              }`}
+              onClick={() => { setActiveTab("past"); setPageIndex(0); }}
+              className={`px-6 py-2 rounded-full text-sm transition ${activeTab === "past" ? "bg-sky-400 text-black" : "text-gray-300"}`}
             >
               Past Events
             </button>
@@ -176,7 +173,7 @@ const Event = () => {
 
         {/* Events */}
         <div className="space-y-8">
-          {eventsToShow.map((event, index) => (
+          {currentEvents.map((event, index) => (
             <div
               key={index}
               className="flex flex-col md:flex-row bg-white/5 backdrop-blur-md border border-white/10 rounded-[13px] overflow-hidden w-full md:w-[945px] h-auto md:h-[312px]"
@@ -193,9 +190,7 @@ const Event = () => {
                 <div>
                   <h3 className="text-lg font-semibold mb-2">{event.title}</h3>
 
-                  <p className="text-gray-400 text-sm mb-4">
-                    {event.description}
-                  </p>
+                  <p className="text-gray-400 text-sm mb-4">{event.description}</p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 text-sm text-gray-300">
                     <div className="flex items-center gap-2">
@@ -217,7 +212,6 @@ const Event = () => {
                   </div>
                 </div>
 
-                {/* Button */}
                 <button
                   onClick={() => {
                     if (activeTab === "past") {
@@ -232,6 +226,29 @@ const Event = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Pagination Buttons */}
+        <div className="flex justify-center gap-4 mt-6">
+          <button
+            onClick={() => setPageIndex((prev) => Math.max(prev - 1, 0))}
+            disabled={pageIndex === 0}
+            className="px-4 py-2 bg-gray-700 text-white rounded disabled:opacity-50"
+          >
+            Previous
+          </button>
+
+          <button
+            onClick={() =>
+              setPageIndex((prev) =>
+                (prev + 1) * eventsPerPage < eventsToShow.length ? prev + 1 : prev
+              )
+            }
+            disabled={(pageIndex + 1) * eventsPerPage >= eventsToShow.length}
+            className="px-4 py-2 bg-gray-700 text-white rounded disabled:opacity-50"
+          >
+            Next
+          </button>
         </div>
 
         {/* Modal */}
@@ -251,13 +268,8 @@ const Event = () => {
                 ✕
               </button>
 
-              <h2 className="text-xl font-bold mb-2">
-                {selectedEvent.title}
-              </h2>
-
-              <p className="text-gray-300 mb-4">
-                {selectedEvent.description}
-              </p>
+              <h2 className="text-xl font-bold mb-2">{selectedEvent.title}</h2>
+              <p className="text-gray-300 mb-4">{selectedEvent.description}</p>
 
               {/* Slider */}
               <div className="relative w-full h-[340px] overflow-hidden rounded-lg">
@@ -287,9 +299,7 @@ const Event = () => {
                 {/* RIGHT ARROW */}
                 <button
                   onClick={() =>
-                    setSlideIndex(
-                      (slideIndex + 1) % selectedEvent.images.length
-                    )
+                    setSlideIndex((slideIndex + 1) % selectedEvent.images.length)
                   }
                   className="absolute right-3 top-1/2 -translate-y-1/2 p-2"
                 >

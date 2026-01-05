@@ -22,7 +22,7 @@ const YouTubeResource = () => {
     setCurrent((p) => (p + 1) % slides.length);
 
   return (
-    <div id="resouces" className="yt-container">
+    <div id="resources" className="yt-container">
 
       <h2 className="yt-title heading-primary">YOUTUBE RESOURCE</h2>
 

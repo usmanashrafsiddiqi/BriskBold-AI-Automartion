@@ -102,7 +102,7 @@ const Contact = () => {
                   <img
                     src={loc.img}
                     alt={loc.title}
-                    className="w-6 h-6 rounded-full object-cover"
+                    className="w-6 h-6  object-cover"
                   />
                   <h4 className="text-lg font-semibold text-sky-400">
                     {loc.title}

@@ -31,9 +31,9 @@ const useVoice = () => {
           .getElementById("services")
           ?.scrollIntoView({ behavior: "smooth" });
       }
-      if (transcript.includes("customers")) {
+      if (transcript.includes("resources")) {
         document
-          .getElementById("customers")
+          .getElementById("resources")
           ?.scrollIntoView({ behavior: "smooth" });
       }
       if (transcript.includes("about")) {
