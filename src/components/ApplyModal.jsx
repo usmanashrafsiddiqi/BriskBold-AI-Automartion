@@ -15,7 +15,7 @@ const ApplyModal = ({ onClose }) => {
     );
 
     // Replace with your email
-    window.location.href = `mailto:sadafashraf229@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:hr@briskboldit.com?subject=${subject}&body=${body}`;
   };
 
   return (
