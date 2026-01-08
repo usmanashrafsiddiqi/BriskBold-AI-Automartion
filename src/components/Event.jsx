@@ -46,9 +46,9 @@ const Event = () => {
       title: "Web Summit Qatar 2025",
       description:
         "An exciting Day 1 filled with innovation, meaningful networking, and game-changing discussions.We’re here to explore the future of digital transformation and connect with forward-thinking professionals and businesses.",
-      date: "Jun 18, 2024",
+      date: "February 23-25, 2025",
       time: "9:00 AM – 5:00 PM",
-      location: "Online",
+      location: "Qatar",
       attendees: "800+",
       images: ["/web1.jpg", "/web2.jpg", "/web3.jpg","/web4.jpg","/web5.jpg","/web6.jpg"],
     },
@@ -56,9 +56,9 @@ const Event = () => {
       title: "LEAPWeek Riyadh",
       description:
         "BriskBold AI & Automation had an incredible journey at #LEAPWeek in Riyadh—an inspiring week filled with innovation, meaningful connections, and transformative technology shaping the future of digital transformation.",
-      date: "Oct 21, 2024",
+      date: "February 9-12, 2025,",
       time: "10:00 AM – 6:00 PM",
-      location: "Dubai",
+      location: "Riyadh-Kingdom of Saudi Arabia",
       attendees: "900+",
       images: ["/leap1.jpg", "/leap2.jpg","/leap3.jpg","/leap4.jpg"],
     },
@@ -66,11 +66,11 @@ const Event = () => {
       title: "Dubai30x30 Fitness Challenge",
       description:
         "The #Dubai30x30 Fitness Challenge turned Sheikh Zayed Road into a massive open fitness track—thousands of people cycling together, wheels spinning, energy high, and motivation at its peak.The atmosphere was electric, the vibe truly inspiring, and the commitment to health and wellness felt next level.",
-      date: "Dec 5, 2024",
+      date: "November 2025,",
       time: "12:00 PM – 7:00 PM",
-      location: "Singapore",
+      location: "Sheikh Zayed Road- Dubai",
       attendees: "1,100+",
-      images: ["/fit1.jpg", "/fit2.jpg", "/fit3.jpg","/fit4.jpg"],
+      images: ["/fit1.jpg", "/fit2.jpg", "/fit3.jpg","/fit4.jpg","/ride1.jpg", "/ride2.jpg", "/ride3.jpg"],
     },
     {
       title: "A Year to Remember, A Future to Build",
@@ -92,23 +92,14 @@ const Event = () => {
       attendees: "1,100+",
       images: ["/emb1.jpg", "/emb2.jpg", "/emb3.jpg"],
     },
-      {
-      title: "Dubai Ride 2024",
-      description:
-        "What an incredible experience at Dubai Ride 2024. Riding through the heart of the city alongside an energetic and passionate community made this event truly unforgettable.",
-      date: "Dec 5, 2024",
-      time: "12:00 PM – 7:00 PM",
-      location: "Singapore",
-      attendees: "1,100+",
-      images: ["/ride1.jpg", "/ride2.jpg", "/ride3.jpg"],
-    },
+     
       {
       title: "An Inspiring Week at New York Climate Week 2025",
       description:
         "The past week at New York Climate Week 2025 has been nothing short of extraordinary for BriskBold AI & Automation. As global leaders, innovators, and changemakers came together to accelerate climate action, our team proudly stood at the intersection of technology and sustainability—driving meaningful conversations on how AI and automation can transform carbon reporting worldwide.",
-      date: "Dec 5, 2024",
+      date: "September 21–23, 2025, ",
       time: "12:00 PM – 7:00 PM",
-      location: "Singapore",
+      location: "New York City – Javits Centre",
       attendees: "1,100+",
       images: ["/camp1.jpg", "/camp2.jpg","/camp3.jpg","/camp4.jpg","/camp5.jpg","/camp6.jpg"],
     },
@@ -116,9 +107,9 @@ const Event = () => {
       title: "BriskBOLD AI & Automation at GITEX Global 2025",
       description:
         "BriskBOLD AI & Automation is thrilled to be part of GITEX Global 2025—the world’s largest technology and innovation event—bringing together global leaders, innovators, and visionaries in Dubai.We’re excited to connect, showcase breakthroughs, and shape the future of AI, Automation, and Digital",
-      date: "Dec 5, 2024",
+      date: "October 15, 2025,",
       time: "12:00 PM – 7:00 PM",
-      location: "Singapore",
+      location: "Dubai World Trade Centre",
       attendees: "1,100+",
       images: ["/git1.jpg", "/git2.jpg", "/git3.jpg"],
     },

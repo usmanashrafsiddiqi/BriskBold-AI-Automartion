@@ -8,8 +8,8 @@ const Contact = () => {
       title: "Dubai",
       address:
         "Office 3507, Churchill Executive Tower, Business Bay, Dubai, UAE",
-      phone1: "+(97) 554372731",
-      phone2: "+(97) 554372731",
+      phone1: "+971-506243891",
+      phone2: "+971-506243891",
     },
     {
       img: "/jpflag.png",
