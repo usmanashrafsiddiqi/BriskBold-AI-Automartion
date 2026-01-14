@@ -23,20 +23,6 @@ function App() {
   const { startListening } = useVoice();
 
   return (
-// {/* <div
-//   className="
-//     min-h-screen
-//     w-full
-//     relative
-//     overflow-x-hidden
-//     bg-cover
-//     bg-center
-//     bg-no-repeat
-//     bg-[url('/images/mob1.webp')]
-//     md:bg-[url('/newbgdes.webp')]
-//     bg-fixed
-//   "
-// > */}
 <div
   className="
     min-h-screen
@@ -48,7 +34,7 @@ function App() {
     bg-no-repeat
     bg-[url('/images/mob1.webp')]
     md:bg-[url('/newbgdes.webp')]
-    md:bg-fixed
+    bg-fixed
   "
 >
   {/* <FluidCursor /> */}
