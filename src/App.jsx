@@ -46,7 +46,7 @@ function App() {
     bg-cover
     bg-center
     bg-no-repeat
-    bg-[url('/mob1.webp')]
+    bg-[url('/images/mob1.webp')]
     md:bg-[url('/newbgdes.webp')]
     md:bg-fixed
   "
