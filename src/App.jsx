@@ -18,6 +18,8 @@ import Footer from "./components/Footer";
 import FluidCursor from "./components/FluidCursor";
 import SplashCursor from "./components/SplashCursor";
 import YouTubeResource from './components/YouTubeResource';
+import { Form } from "react-router-dom";
+import ContactForm from "./components/ContactForm";
 
 function App() {
   const { startListening } = useVoice();
@@ -61,6 +63,10 @@ function App() {
     <section id="event"><Event /></section>
     <section id="job"><Job /></section>
     <section id="contact"><Contact /></section>
+    
+<section id="">
+  <ContactForm  />
+</section>
     <section><Footer /></section>
   </div>
 </div>
