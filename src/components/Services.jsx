@@ -41,29 +41,20 @@ const services = [
 
 const Services = () => {
   return (
-    <section className=" relative">
-      {/* Heading */}
+    <section className="relative">
+      {/* ================= HEADING ================= */}
       <div className="text-center mb-8">
-      <h3
-  className=" heading-primary"
-  
->
-  OUR SERVICES
-</h3>
+        <h3 className="heading-primary font-heading">
+          OUR SERVICES
+        </h3>
 
-        <p
-  className="mt-4 paragraph-primary"
- 
->
-  We Build Robots.{" "}
-  <span>
-    For a Better Future of Human Force.
-  </span>
-</p>
-
+        <p className="mt-4 paragraph-primary font-body">
+          We Build Robots.{" "}
+          <span>For a Better Future of Human Force.</span>
+        </p>
       </div>
 
-      {/* Cards */}
+      {/* ================= CARDS ================= */}
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 place-items-center">
         {services.map((service, i) => (
           <div
@@ -88,7 +79,7 @@ const Services = () => {
           >
             {/* LOGO BOX */}
             <div
-              className="flex items-center justify-center mb-6 paragraph-primary"
+              className="flex items-center justify-center mb-6"
               style={{
                 width: "85px",
                 height: "52px",
@@ -99,42 +90,34 @@ const Services = () => {
               <img
                 src={service.logo}
                 alt={service.title}
-                style={{
-                  width: "57px",
-                  height: "36px",
-                  objectFit: "contain",
-                }}
+                className="w-[57px] h-[36px] object-contain"
               />
             </div>
 
-            {/* Title */}
+            {/* TITLE */}
             <h4
-  className="mb-2"
-  style={{
-    fontFamily: "Creato Display",
-    fontWeight: 500,
-    fontSize: "37.86px",
-    lineHeight: "80.7px",
-    letterSpacing: "0%",
-    color: "#ffffff",
-  }}
->
-  {service.title}
-</h4>
+              className="
+                font-heading font-medium
+                text-[37.86px]
+                leading-[80.7px]
+                mb-2
+                uppercase
+              "
+            >
+              {service.title}
+            </h4>
 
-            {/* Description */}
+            {/* DESCRIPTION */}
             <p
-  style={{
-    fontFamily: "Creato Display",
-    fontWeight: 400,
-    fontSize: "17.26px",
-    lineHeight: "21px",
-    letterSpacing: "0%",
-    color: "#D1D5DB",
-  }}
->
-  {service.desc}
-</p>
+              className="
+                font-body font-normal
+                text-[17.26px]
+                leading-[21px]
+                text-gray-300
+              "
+            >
+              {service.desc}
+            </p>
           </div>
         ))}
       </div>

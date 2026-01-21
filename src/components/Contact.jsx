@@ -43,7 +43,7 @@ const Contact = () => {
         {/* Heading */}
         <div className="text-center mb-16">
           <h3
-            className="heading-primary "         >
+            className="heading-primary inline-block px-6 py-2  text-sky-400 border border-sky-400/40 rounded-md "         >
             GET IN TOUCH
           </h3>
         </div>

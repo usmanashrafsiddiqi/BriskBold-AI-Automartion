@@ -3,18 +3,26 @@
 @tailwind utilities;
 
 /* HEADINGS — now Saira */
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+/* HEADINGS */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: "Antonio", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
-/* PARAGRAPHS — now Saira */
+/* PARAGRAPHS */
 p {
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
 }
-
 /* HEADING PRIMARY STYLE */
 .heading-primary {
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: "Antonio", sans-serif;
   font-weight: 700;
   font-size: 48px;
   line-height: 51.15px;
@@ -26,7 +34,7 @@ p {
 
 /* PARAGRAPH PRIMARY STYLE */
 .paragraph-primary {
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 32px;
   line-height: 51.15px;

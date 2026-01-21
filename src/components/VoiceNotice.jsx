@@ -25,35 +25,34 @@ const VoiceNotice = ({ onEnable }) => {
           }}
         >
           {/* Title */}
-          <h2 className="text-[#B5D4FF] text-2xl font-semibold leading-snug">
+          <h2 className="text-[#B5D4FF] text-2xl font-heading font-semibold leading-snug">
             Voice navigation<br />is available.
           </h2>
 
           {/* Subtitle */}
-          <p className="text-[#9EC3FF] text-sm mt-3 max-w-xs">
+          <p className="text-[#9EC3FF] text-sm mt-3 max-w-xs font-body">
             You can navigate this website using your voice.
           </p>
 
           {/* Mic icon */}
-         {/* Mic icon (custom image) */}
-<div className="mt-6 w-20 h-20 rounded-full bg-[#183760] flex items-center justify-center shadow-inner overflow-hidden">
-  <img
-    src="/mic.png"
-    alt="Microphone"
-    className="w-12 h-12 object-contain"
-  />
-</div>
+          <div className="mt-6 w-20 h-20 rounded-full bg-[#183760] flex items-center justify-center shadow-inner overflow-hidden">
+            <img
+              src="/mic.png"
+              alt="Microphone"
+              className="w-12 h-12 object-contain"
+            />
+          </div>
 
           {/* Examples */}
-          <p className="text-[#9EC3FF] text-xs mt-5 leading-relaxed">
+          <p className="text-[#9EC3FF] text-xs mt-5 leading-relaxed font-body">
             For example, say<br />
-            <span className="font-semibold">
+            <span className="font-heading font-semibold">
               “Home”, “Services”, “Contact”
             </span>
           </p>
 
           {/* Buttons row */}
-          <div className="flex justify-between items-center w-full mt-8 text-sm">
+          <div className="flex justify-between items-center w-full mt-8 text-sm font-body">
             <button
               onClick={() => setShow(false)}
               className="text-white/70 hover:text-white transition"

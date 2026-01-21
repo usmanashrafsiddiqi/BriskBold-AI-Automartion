@@ -1,6 +1,7 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import ApplyModal from "./ApplyModal";
+
+/* ---------------- JOB DATA ---------------- */
 const jobs = [
   {
     id: 1,
@@ -32,7 +33,7 @@ const jobs = [
     type: "Full Time / Part Time",
     desc:
       "Help us build strong market strategies, grow our brand presence, and connect with clients through smart digital marketing.",
-    available: false, // 🔒 Not available
+    available: false,
   },
 ];
 
@@ -40,10 +41,10 @@ const Job = () => {
   const [selectedJob, setSelectedJob] = useState(null);
 
   return (
-    <section className="py-8 ">
+    <section className="py-8">
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* ---- SAME UI ---- */}
+        {/* HEADER */}
         <div className="text-center mb-14">
           <span className="inline-block px-6 py-2 text-sky-400 border border-sky-400/40 rounded-md text-sm tracking-widest mb-4 heading-primary">
             JOIN OUR TEAM
@@ -57,20 +58,28 @@ const Job = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
-          {/* JOB CARDS */}
+          {/* JOB LIST */}
           <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
-            {jobs.map(job => (
+            {jobs.map((job) => (
               <div
                 key={job.id}
-                className={`bg-[#0B1220] border border-sky-400/30 rounded-xl p-6`}
+                className="bg-[#0B1220] border border-sky-400/30 rounded-xl p-6 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <img src="/jobpro.png" className="w-10 h-10 rounded-full" />
+                    <img
+                      src="/jobpro.png"
+                      alt="Job Icon"
+                      className="w-10 h-10 rounded-full"
+                    />
 
                     <div>
-                      <h4 className="text-white font-semibold">{job.title}</h4>
-                      <p className="text-sm text-gray-400">{job.type}</p>
+                      <h4 className="text-white font-semibold">
+                        {job.title}
+                      </h4>
+                      <p className="text-sm text-gray-400">
+                        {job.type}
+                      </p>
                     </div>
                   </div>
 
@@ -81,11 +90,12 @@ const Job = () => {
 
                 <button
                   disabled={!job.available}
-                  onClick={() => setSelectedJob(job)}
-                  className={`mt-6 px-5 py-2 text-sm rounded-md 
-                    ${job.available
-                      ? "bg-sky-500 hover:bg-sky-600"
-                      : "bg-gray-600 cursor-not-allowed"
+                  onClick={() => job.available && setSelectedJob(job)}
+                  className={`mt-6 px-5 py-2 text-sm rounded-md transition
+                    ${
+                      job.available
+                        ? "bg-sky-500 hover:bg-sky-600 text-white"
+                        : "bg-gray-600 text-gray-300 cursor-not-allowed"
                     }`}
                 >
                   {job.available ? "APPLY NOW" : "NOT AVAILABLE"}
@@ -94,8 +104,8 @@ const Job = () => {
             ))}
           </div>
 
-          {/* APPLY FORM RIGHT BOX (unchanged) */}
-         <div className="bg-[#0B1220] border border-sky-400/40 rounded-xl p-8">
+          {/* APPLY FORM (RIGHT PANEL) */}
+          <div className="bg-[#0B1220] border border-sky-400/40 rounded-xl p-8">
             <h3 className="text-sky-400 text-xl font-semibold mb-6 text-center">
               JOIN OUR TEAM
             </h3>
@@ -136,14 +146,13 @@ const Job = () => {
         </div>
       </div>
 
-      {/* MODAL */}
+      {/* APPLY MODAL */}
       {selectedJob && (
         <ApplyModal
           job={selectedJob}
           onClose={() => setSelectedJob(null)}
         />
       )}
-
     </section>
   );
 };

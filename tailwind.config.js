@@ -5,11 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-  extend: {
-    fontFamily: {
-      saira: ["Saira", "sans-serif"],
+    extend: {
+      fontFamily: {
+        heading: ["Antonio", "sans-serif"], // for headings
+        body: ["Lato", "sans-serif"],       // for paragraphs / descriptions
+        saira: ["Saira", "sans-serif"],     // keep existing font
+      },
     },
   },
-},
   plugins: [],
-}
+};

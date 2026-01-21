@@ -42,47 +42,53 @@ const ContactForm = () => {
     <section className="w-full py-12 px-4 flex justify-center">
       <div className="w-full max-w-4xl bg-white/10 backdrop-blur-2xl border border-white/20 rounded-3xl shadow-2xl p-8 sm:p-10 md:p-14">
 
-        <h2 className="text-center text-3xl md:text-4xl font-bold text-white mb-10">
+        {/* Heading */}
+        <h2 className="text-center text-3xl md:text-4xl font-heading font-bold text-white mb-10">
           Send Us a Message
         </h2>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        {/* Form */}
+        <form onSubmit={handleSubmit} className="space-y-6 font-body">
+
+          {/* Name & Email */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <input
               type="text"
               name="name"
               required
               placeholder="Your Name"
-              className="w-full px-5 py-4 rounded-xl bg-black/40 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-sky-500"
+              className="w-full px-5 py-4 rounded-xl bg-black/40 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-sky-500 font-body"
             />
-
             <input
               type="email"
               name="email"
               required
               placeholder="Your Email"
-              className="w-full px-5 py-4 rounded-xl bg-black/40 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-sky-500"
+              className="w-full px-5 py-4 rounded-xl bg-black/40 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-sky-500 font-body"
             />
           </div>
 
+          {/* Message */}
           <textarea
             name="message"
             required
             rows="6"
             placeholder="Tell us about your project..."
-            className="w-full px-5 py-4 rounded-xl bg-black/40 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-sky-500 resize-none"
+            className="w-full px-5 py-4 rounded-xl bg-black/40 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-sky-500 resize-none font-body"
           />
 
+          {/* Submit Button */}
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-4 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 text-white text-lg font-semibold transition hover:scale-[1.02] disabled:opacity-70"
+            className="w-full py-4 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 text-white text-lg font-heading font-semibold transition hover:scale-[1.02] disabled:opacity-70"
           >
             {loading ? "Sending..." : "Send Message"}
           </button>
 
+          {/* Status Message */}
           {status && (
-            <p className="text-center mt-4 text-green-400">
+            <p className="text-center mt-4 text-green-400 font-body">
               {status}
             </p>
           )}

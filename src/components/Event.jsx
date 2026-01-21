@@ -1,14 +1,21 @@
 import React, { useState } from "react";
-import { FaCalendarAlt, FaClock, FaMapMarkerAlt, FaUsers } from "react-icons/fa";
+import {
+  FaCalendarAlt,
+  FaClock,
+  FaMapMarkerAlt,
+  FaUsers,
+} from "react-icons/fa";
+
+const EVENTS_PER_PAGE = 3;
 
 const Event = () => {
   const [activeTab, setActiveTab] = useState("past");
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [slideIndex, setSlideIndex] = useState(0);
   const [pageIndex, setPageIndex] = useState(0);
-  const eventsPerPage = 3;
 
-  const upcomingEvents = [
+  /* -------------------- DATA -------------------- */
+const upcomingEvents = [
     {
       title: "AI Convergence 2025: Shaping Intelligent Systems",
       description:
@@ -123,67 +130,110 @@ const Event = () => {
       attendees: "1,100+",
       images: ["/kash1.jpg", "/kash2.jpg", "/kash3.jpg","/kash4.jpg","/kash5.jpg","/kash6.jpg"],
     },
-  ];
+  ];  /* -------------------- PAGINATION -------------------- */
 
-   const eventsToShow = activeTab === "upcoming" ? upcomingEvents : pastEvents;
+  const events =
+    activeTab === "upcoming" ? upcomingEvents : pastEvents;
 
-  // Slice the events for pagination
-  const start = pageIndex * eventsPerPage;
-  const end = start + eventsPerPage;
-  const currentEvents = eventsToShow.slice(start, end);
+  const start = pageIndex * EVENTS_PER_PAGE;
+  const currentEvents = events.slice(
+    start,
+    start + EVENTS_PER_PAGE
+  );
+
+  /* -------------------- HANDLERS -------------------- */
+
+  const openModal = (event) => {
+    if (activeTab === "past") {
+      setSelectedEvent(event);
+      setSlideIndex(0);
+    }
+  };
+
+  const closeModal = () => setSelectedEvent(null);
+
+  const nextSlide = () =>
+    setSlideIndex(
+      (prev) =>
+        (prev + 1) % selectedEvent.images.length
+    );
+
+  const prevSlide = () =>
+    setSlideIndex(
+      (prev) =>
+        (prev - 1 + selectedEvent.images.length) %
+        selectedEvent.images.length
+    );
+
+  /* -------------------- UI -------------------- */
 
   return (
     <section className="py-24">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Heading */}
-        <div className="text-center mb-10">
-          <span className="heading-primary py-10">Events & Workshops</span>
-          <h2 className="paragraph-primary">Join Our Event</h2>
-          <p className="text-gray-400 text-sm mt-2">
-            Upgrade Your Skills Through Live Experiences.
+
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h3 className="heading-primary">Events & Workshops</h3>
+          <p className="paragraph-primary mt-2">
+            Join Our Events
+          </p>
+          <p className="text-gray-400 text-sm mt-1">
+            Upgrade your skills through live experiences.
           </p>
         </div>
 
         {/* Tabs */}
-        <div className="flex justify-center mb-12">
-          <div className="bg-white/5 border border-white/10 rounded-full p-1 flex gap-1">
-            <button
-              onClick={() => { setActiveTab("upcoming"); setPageIndex(0); }}
-              className={`px-6 py-2 rounded-full text-sm transition ${activeTab === "upcoming" ? "bg-sky-400 text-black" : "text-gray-300"}`}
-            >
-              Upcoming Events
-            </button>
-            <button
-              onClick={() => { setActiveTab("past"); setPageIndex(0); }}
-              className={`px-6 py-2 rounded-full text-sm transition ${activeTab === "past" ? "bg-sky-400 text-black" : "text-gray-300"}`}
-            >
-              Past Events
-            </button>
+        <div className="flex justify-center mb-14">
+          <div className="bg-white/5 border border-white/10 rounded-full p-1 flex">
+            {["upcoming", "past"].map((tab) => (
+              <button
+                key={tab}
+                onClick={() => {
+                  setActiveTab(tab);
+                  setPageIndex(0);
+                }}
+                className={`px-6 py-2 rounded-full text-sm transition ${
+                  activeTab === tab
+                    ? "bg-sky-400 text-black"
+                    : "text-gray-300"
+                }`}
+              >
+                {tab === "upcoming"
+                  ? "Upcoming Events"
+                  : "Past Events"}
+              </button>
+            ))}
           </div>
         </div>
 
-        {/* Events */}
+        {/* Event Cards */}
         <div className="space-y-8">
-          {currentEvents.map((event, index) => (
+          {currentEvents.map((event, i) => (
             <div
-              key={index}
-              className="flex flex-col md:flex-row bg-white/5 backdrop-blur-md border border-white/10 rounded-[13px] overflow-hidden w-full md:w-[945px] h-auto md:h-[312px]"
+              key={i}
+              className="flex flex-col md:flex-row bg-white/5 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden md:h-[312px]"
             >
-              {/* Image */}
               <img
-                src={activeTab === "upcoming" ? event.image : event.images[0]}
+                src={
+                  activeTab === "upcoming"
+                    ? event.image
+                    : event.images[0]
+                }
                 alt={event.title}
-                className="w-full h-[220px] md:w-[451px] md:h-[312px] object-cover"
+                className="w-full md:w-[451px] h-[220px] md:h-full object-cover"
               />
 
-              {/* Content */}
               <div className="flex flex-col justify-between p-6 text-white flex-1">
                 <div>
-                  <h3 className="text-lg font-semibold mb-2">{event.title}</h3>
+                  <h3 className="text-lg font-semibold mb-2">
+                    {event.title}
+                  </h3>
 
-                  <p className="text-gray-400 text-sm mb-4">{event.description}</p>
+                  <p className="text-gray-400 text-sm mb-4">
+                    {event.description}
+                  </p>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 text-sm text-gray-300">
+                  <div className="grid sm:grid-cols-2 gap-4 text-sm text-gray-300">
                     <div className="flex items-center gap-2">
                       <FaCalendarAlt className="text-sky-400" />
                       {event.date}
@@ -204,38 +254,38 @@ const Event = () => {
                 </div>
 
                 <button
-                  onClick={() => {
-                    if (activeTab === "past") {
-                      setSelectedEvent(event);
-                      setSlideIndex(0);
-                    }
-                  }}
+                  onClick={() => openModal(event)}
                   className="mt-6 self-start px-6 py-2 rounded-md bg-gradient-to-r from-sky-400 to-blue-500 text-black text-sm font-medium hover:opacity-90 transition"
                 >
-                  {activeTab === "upcoming" ? "Coming Soon" : "Check Recap"}
+                  {activeTab === "upcoming"
+                    ? "Coming Soon"
+                    : "Check Recap"}
                 </button>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Pagination Buttons */}
-        <div className="flex justify-center gap-4 mt-6">
+        {/* Pagination */}
+        <div className="flex justify-center gap-4 mt-8">
           <button
-            onClick={() => setPageIndex((prev) => Math.max(prev - 1, 0))}
             disabled={pageIndex === 0}
+            onClick={() =>
+              setPageIndex((p) => Math.max(p - 1, 0))
+            }
             className="px-4 py-2 bg-gray-700 text-white rounded disabled:opacity-50"
           >
             Previous
           </button>
 
           <button
-            onClick={() =>
-              setPageIndex((prev) =>
-                (prev + 1) * eventsPerPage < eventsToShow.length ? prev + 1 : prev
-              )
+            disabled={
+              (pageIndex + 1) * EVENTS_PER_PAGE >=
+              events.length
             }
-            disabled={(pageIndex + 1) * eventsPerPage >= eventsToShow.length}
+            onClick={() =>
+              setPageIndex((p) => p + 1)
+            }
             className="px-4 py-2 bg-gray-700 text-white rounded disabled:opacity-50"
           >
             Next
@@ -246,64 +296,60 @@ const Event = () => {
         {selectedEvent && (
           <div
             className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50"
-            onClick={() => setSelectedEvent(null)}
+            onClick={closeModal}
           >
             <div
-              className="bg-[#0d1b2a] rounded-xl p-6 max-w-3xl w-full text-white relative"
               onClick={(e) => e.stopPropagation()}
+              className="bg-[#0d1b2a] rounded-xl p-6 max-w-3xl w-full text-white relative"
             >
               <button
-                onClick={() => setSelectedEvent(null)}
-                className="absolute top-4 right-4 text-gray-300 hover:text-white text-xl"
+                onClick={closeModal}
+                className="absolute top-4 right-4 text-xl"
               >
                 ✕
               </button>
 
-              <h2 className="text-xl font-bold mb-2">{selectedEvent.title}</h2>
-              <p className="text-gray-300 mb-4">{selectedEvent.description}</p>
+              <h2 className="text-xl font-bold mb-2">
+                {selectedEvent.title}
+              </h2>
 
-              {/* Slider */}
-              <div className="relative w-full h-[340px] overflow-hidden rounded-lg">
+              <p className="text-gray-300 mb-4">
+                {selectedEvent.description}
+              </p>
+
+              <div className="relative h-[340px] overflow-hidden rounded-lg">
                 <img
                   src={selectedEvent.images[slideIndex]}
                   className="w-full h-full object-cover"
                   alt=""
                 />
 
-                {/* LEFT ARROW */}
                 <button
-                  onClick={() =>
-                    setSlideIndex(
-                      (slideIndex - 1 + selectedEvent.images.length) %
-                        selectedEvent.images.length
-                    )
-                  }
-                  className="absolute left-3 top-1/2 -translate-y-1/2 p-2"
+                  onClick={prevSlide}
+                  className="absolute left-3 top-1/2 -translate-y-1/2"
                 >
                   <img
                     src="/leftarrow.png"
-                    alt="Previous"
-                    className="w-8 h-8 hover:scale-110 transition cursor-pointer"
+                    className="w-8 h-8"
+                    alt=""
                   />
                 </button>
 
-                {/* RIGHT ARROW */}
                 <button
-                  onClick={() =>
-                    setSlideIndex((slideIndex + 1) % selectedEvent.images.length)
-                  }
-                  className="absolute right-3 top-1/2 -translate-y-1/2 p-2"
+                  onClick={nextSlide}
+                  className="absolute right-3 top-1/2 -translate-y-1/2"
                 >
                   <img
                     src="/rightarrow.png"
-                    alt="Next"
-                    className="w-8 h-8 hover:scale-110 transition cursor-pointer"
+                    className="w-8 h-8"
+                    alt=""
                   />
                 </button>
               </div>
 
               <div className="text-center text-sm text-gray-400 mt-2">
-                {slideIndex + 1} / {selectedEvent.images.length}
+                {slideIndex + 1} /{" "}
+                {selectedEvent.images.length}
               </div>
             </div>
           </div>

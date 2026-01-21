@@ -16,10 +16,10 @@ const Footer = () => {
 
           {/* Brand */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-3">
+            <h3 className="text-white text-lg font-heading font-semibold mb-3">
               BriskBOLD
             </h3>
-            <p className="text-gray-400 text-sm leading-relaxed mb-5">
+            <p className="text-gray-400 text-sm leading-relaxed mb-5 font-body">
               Building the future of business
               with intelligent, automated AI systems.
             </p>
@@ -65,60 +65,54 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-medium mb-4">
+            <h4 className="text-white font-heading font-medium mb-4">
               Quick Links
             </h4>
 
-            <ul className="space-y-2 text-sm text-gray-400">
-
-             <li>
-  <button
-    onClick={() => document.getElementById("home")?.scrollIntoView({ behavior: "smooth" })}
-    className="hover:text-sky-400"
-  >
-    Home
-  </button>
-</li>
-
-<li>
-  <button
-    onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
-    className="hover:text-sky-400"
-  >
-    About Us
-  </button>
-</li>
-
-<li>
-  <button
-    onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
-    className="hover:text-sky-400"
-  >
-    Services
-  </button>
-</li>
-
-<li>
-  <button
-    onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-    className="hover:text-sky-400"
-  >
-    Contact Us
-  </button>
-</li>
-
+            <ul className="space-y-2 text-sm text-gray-400 font-body">
+              <li>
+                <button
+                  onClick={() => document.getElementById("home")?.scrollIntoView({ behavior: "smooth" })}
+                  className="hover:text-sky-400"
+                >
+                  Home
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
+                  className="hover:text-sky-400"
+                >
+                  About Us
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
+                  className="hover:text-sky-400"
+                >
+                  Services
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+                  className="hover:text-sky-400"
+                >
+                  Contact Us
+                </button>
+              </li>
               <li>
                 <a href="#privacy" className="hover:text-sky-400">
                   Privacy Policy
                 </a>
               </li>
-
             </ul>
           </div>
 
           {/* Newsletter */}
           <div>
-            <h4 className="text-white font-medium mb-4">
+            <h4 className="text-white font-heading font-medium mb-4">
               Subscribe to Our Newsletter
             </h4>
 
@@ -126,9 +120,9 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="bg-transparent text-sm text-white px-3 py-2 w-full focus:outline-none"
+                className="bg-transparent text-sm text-white px-3 py-2 w-full focus:outline-none font-body"
               />
-              <button className="bg-sky-500 hover:bg-sky-600 transition px-4 text-sm text-white">
+              <button className="bg-sky-500 hover:bg-sky-600 transition px-4 text-sm text-white font-body">
                 Subscribe
               </button>
             </div>
@@ -136,10 +130,10 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="text-white font-medium mb-4">
+            <h4 className="text-white font-heading font-medium mb-4">
               Contact Us
             </h4>
-            <ul className="space-y-2 text-sm text-gray-400">
+            <ul className="space-y-2 text-sm text-gray-400 font-body">
               <li>Email: info@briskbold.com</li>
               <li>Phone: (+97) 554372731</li>
               <li>Address: Business Bay, Dubai, UAE</li>
@@ -148,7 +142,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+        <div className="border-t border-white/10 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-400 font-body">
           <p>
             © 2025 BriskBold AI Automation. All rights reserved.
           </p>

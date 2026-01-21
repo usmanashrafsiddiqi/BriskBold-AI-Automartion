@@ -45,24 +45,19 @@ const About = () => {
     <section className="relative overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* ABOUT HEADER */}
+        {/* ================= ABOUT HEADER ================= */}
         <div className="text-center mb-20">
-          <h3 className="heading-primary">
+          <h3 className="heading-primary font-heading">
             ABOUT US
           </h3>
 
-          <p
-            className="max-w-4xl mx-auto mt-6 text-center"
-            style={{
-              fontFamily: "Creato Display",
-              fontWeight: 500,
-              fontSize: "28.19px",
-              lineHeight: "100%",
-              letterSpacing: "0%",
-              color: "#E5E7EB",
-            }}
-          >
-            <span style={{ fontWeight: 600, color: "#FFFFFF" }}>
+          <p className="max-w-4xl mx-auto mt-6 text-center
+            font-body font-medium
+            text-[28.19px]
+            leading-[1]
+            text-gray-200
+          ">
+            <span className="font-heading font-semibold text-white">
               BriskBold AI & Automation:
             </span>{" "}
             Pioneering the Future with Scalable, Tailor-Made Solutions Empowering
@@ -71,13 +66,21 @@ const About = () => {
           </p>
 
           <div className="mt-10">
-            <button className="px-8 py-3 rounded-md border border-sky-400/30 text-sky-400 text-sm tracking-widest uppercase hover:bg-sky-400/10 transition">
+            <button className="
+              px-8 py-3 rounded-md
+              border border-sky-400/30
+              text-sky-400 text-sm
+              tracking-widest uppercase
+              hover:bg-sky-400/10
+              transition
+              font-heading
+            ">
               Why Choose Us?
             </button>
           </div>
         </div>
 
-        {/* FEATURE GRID */}
+        {/* ================= FEATURE GRID ================= */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 place-items-center">
           {features.map((item, index) => (
             <div
@@ -86,26 +89,16 @@ const About = () => {
                 bg-white/5
                 backdrop-blur-lg
                 rounded-[13px]
-                border-l
-                border-white/20
-                flex
-                flex-col
-                items-center
-                justify-center
+                border-l border-[#41ADD3]
+                flex flex-col
+                items-center justify-center
                 text-center
-                transition-all
-                duration-300
+                transition-all duration-300
                 hover:-translate-y-1
                 hover:border-sky-400/50
-                w-full
-                max-w-[295px]
+                w-full max-w-[295px]
+                h-[206px]
               "
-              style={{
-                width: "295px",
-                height: "206px",
-                opacity: 1,
-                borderLeft: "1px solid #41ADD3",
-              }}
             >
               {/* ICON */}
               <div
@@ -119,33 +112,23 @@ const About = () => {
               </div>
 
               {/* TITLE */}
-              <h4
-                style={{
-                  fontFamily: "Creato Display",
-                  fontWeight: 400,
-                  fontSize: "31.03px",
-                  lineHeight: "100%",
-                  letterSpacing: "0%",
-                  color: "#FFFFFF",
-                  textAlign: "center",
-                  marginBottom: "6px",
-                }}
-              >
+              <h4 className="
+                font-heading font-normal
+                text-[31.03px]
+                leading-[1]
+                text-white
+                mb-[6px]
+              ">
                 {item.title}
               </h4>
 
               {/* DESCRIPTION */}
-              <p
-                style={{
-                  fontFamily: "Creato Display",
-                  fontWeight: 400,
-                  fontSize: "16.73px",
-                  lineHeight: "100%",
-                  letterSpacing: "0%",
-                  color: "#D1D5DB",
-                  textAlign: "center",
-                }}
-              >
+              <p className="
+                font-body font-normal
+                text-[16.73px]
+                leading-[1]
+                text-gray-300
+              ">
                 {item.desc}
               </p>
             </div>

@@ -24,19 +24,17 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50">
-
-      {/* ================= DESKTOP NAVBAR (UNTOUCHED) ================= */}
+      {/* ================= DESKTOP NAVBAR ================= */}
       <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-
         {/* Logo */}
         <img
           src="/desklogo.png"
           alt="Company Logo"
-          style={{ width: "142px", height: "51px" }}
+          className="w-[142px] h-[51px]"
         />
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center gap-8 text-white text-sm font-medium">
+        <ul className="hidden md:flex items-center gap-8 text-white text-sm">
           {[
             { id: "home", label: "HOME" },
             { id: "services", label: "SERVICES" },
@@ -50,15 +48,18 @@ const Navbar = () => {
               <li
                 key={item.id}
                 onClick={() => handleScroll(item.id)}
-                className="cursor-pointer px-4 py-1.5 rounded-md transition-all duration-300 hover:text-sky-400"
+                className={`
+                  cursor-pointer px-4 py-1.5 rounded-md
+                  transition-all duration-300
+                  hover:text-sky-400
+                  font-heading font-medium uppercase
+                  text-[16.68px]
+                  ${isActive ? "text-white" : ""}
+                `}
                 style={{
-                  fontFamily: "Creato Display",
-                  fontWeight: 500,
-                  fontSize: "16.68px",
                   ...(isActive && {
                     background:
                       "linear-gradient(97.75deg, #9ACEEE 26.04%, #389ADB 106.73%)",
-                    color: "#ffffff",
                     boxShadow: "0 4px 12px rgba(56,154,219,0.35)",
                   }),
                 }}
@@ -109,7 +110,7 @@ const Navbar = () => {
         {/* Accent Line */}
         <div className="h-px w-full bg-gradient-to-r from-transparent via-sky-400/60 to-transparent" />
 
-        {/* Menu Items */}
+        {/* Mobile Menu Items */}
         <div className="flex flex-col gap-6 px-8 mt-10">
           {[
             { id: "home", label: "HOME" },
@@ -121,11 +122,15 @@ const Navbar = () => {
             <div
               key={item.id}
               onClick={() => handleScroll(item.id)}
-              className={`text-white text-lg tracking-wide cursor-pointer transition-all duration-300
-                ${active === item.id ? "text-sky-400" : "opacity-80 hover:opacity-100"}
+              className={`
+                cursor-pointer text-lg tracking-wide uppercase
+                transition-all duration-300
+                font-heading font-medium
+                ${active === item.id
+                  ? "text-sky-400"
+                  : "text-white/80 hover:text-white"}
               `}
               style={{
-                fontFamily: "Creato Display",
                 transitionDelay: `${index * 80}ms`,
               }}
             >
