@@ -74,38 +74,38 @@ const upcomingEvents = [
       description:
         "The #Dubai30x30 Fitness Challenge turned Sheikh Zayed Road into a massive open fitness track—thousands of people cycling together, wheels spinning, energy high, and motivation at its peak.The atmosphere was electric, the vibe truly inspiring, and the commitment to health and wellness felt next level.",
       date: "November 2025,",
-      time: "12:00 PM – 7:00 PM",
+      time: "1:00 PM – 7:00 PM",
       location: "Sheikh Zayed Road- Dubai",
       attendees: "1,100+",
-      images: ["/fit1.jpg", "/fit2.jpg", "/fit3.jpg","/fit4.jpg","/ride1.jpg", "/ride2.jpg", "/ride3.jpg"],
+      images: ["/fit1.jpg", "/fit2.jpg", "/fit3.jpg","/fit4.jpg","/ride1.jpg", "/ride2.jpg", "/ride3.jpg","/emb1.jpg", "/emb2.jpg", "/emb3.jpg"],
     },
     {
       title: "A Year to Remember, A Future to Build",
       description:
         "As 2024 comes to a close, it stands out as a truly transformational year—marked by growth, innovation, and meaningful connections. It was a year of success, strong coordination, trusted partnerships, lasting friendships, and memorable journeys that went beyond expectations.",
       date: "Dec 5, 2024",
-      time: "12:00 PM – 7:00 PM",
+      time: "12:00 AM – 4:00 PM",
       location: "Singapore",
       attendees: "1,100+",
       images: ["/year1.jpg", "/year2.jpg", "/year3.jpg","/year4.jpg","/year5.jpg","/year6.jpg"],
     },
-      {
-      title: "Embracing the Dubai 30x30 Fitness Challenge",
-      description:
-        "Embracing the Dubai 30x30 Fitness Challenge is a commitment to building healthier habits through consistency and movement. This challenge highlights how small daily actions—just 30 minutes of activity—can create powerful, long-term impact. It’s an inspiring reminder of the community spirit, energy, and focus on well-being that truly defines Dubai.",
-      date: "Dec 5, 2024",
-      time: "12:00 PM – 7:00 PM",
-      location: "Singapore",
-      attendees: "1,100+",
-      images: ["/emb1.jpg", "/emb2.jpg", "/emb3.jpg"],
-    },
+    //   {
+    //   title: "Embracing the Dubai 30x30 Fitness Challenge",
+    //   description:
+    //     "Embracing the Dubai 30x30 Fitness Challenge is a commitment to building healthier habits through consistency and movement. This challenge highlights how small daily actions—just 30 minutes of activity—can create powerful, long-term impact. It’s an inspiring reminder of the community spirit, energy, and focus on well-being that truly defines Dubai.",
+    //   date: "Dec 5, 2024",
+    //   time: "12:00 PM – 7:00 PM",
+    //   location: "Singapore",
+    //   attendees: "1,100+",
+    //   images: ["/emb1.jpg", "/emb2.jpg", "/emb3.jpg"],
+    // },
      
       {
       title: "An Inspiring Week at New York Climate Week 2025",
       description:
         "The past week at New York Climate Week 2025 has been nothing short of extraordinary for BriskBold AI & Automation. As global leaders, innovators, and changemakers came together to accelerate climate action, our team proudly stood at the intersection of technology and sustainability—driving meaningful conversations on how AI and automation can transform carbon reporting worldwide.",
       date: "September 21–23, 2025, ",
-      time: "12:00 PM – 7:00 PM",
+      time: "11:00 AM – 7:00 PM",
       location: "New York City – Javits Centre",
       attendees: "1,100+",
       images: ["/camp1.jpg", "/camp2.jpg","/camp3.jpg","/camp4.jpg","/camp5.jpg","/camp6.jpg"],
@@ -115,7 +115,7 @@ const upcomingEvents = [
       description:
         "BriskBOLD AI & Automation is thrilled to be part of GITEX Global 2025—the world’s largest technology and innovation event—bringing together global leaders, innovators, and visionaries in Dubai.We’re excited to connect, showcase breakthroughs, and shape the future of AI, Automation, and Digital",
       date: "October 15, 2025,",
-      time: "12:00 PM – 7:00 PM",
+      time: "10:00 AM – 7:00 PM",
       location: "Dubai World Trade Centre",
       attendees: "1,100+",
       images: ["/git1.jpg", "/git2.jpg", "/git3.jpg"],
@@ -124,9 +124,9 @@ const upcomingEvents = [
       title: "Aligning Minds, Automating Futures.",
       description:
         "BriskBold AI & Automation Team Meetup | KashmirThe BriskBold AI & Automation Dubai team came together in the serene setting of a Sufi Café in Kashmir for a meaningful in-person meetup focused on alignment, innovation, and shared vision.",
-      date: "Dec 5, 2024",
-      time: "12:00 PM – 7:00 PM",
-      location: "Singapore",
+      date: "july 31, 2024",
+      time: "10:00 AM – 5:00 PM",
+      location: "Srinagar,Jammu & Kashmir",
       attendees: "1,100+",
       images: ["/kash1.jpg", "/kash2.jpg", "/kash3.jpg","/kash4.jpg","/kash5.jpg","/kash6.jpg"],
     },
