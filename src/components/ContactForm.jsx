@@ -43,9 +43,16 @@ const ContactForm = () => {
       <div className="w-full max-w-4xl bg-white/10 backdrop-blur-2xl border border-white/20 rounded-3xl shadow-2xl p-8 sm:p-10 md:p-14">
 
         {/* Heading */}
-        <h2 className="text-center text-3xl md:text-4xl font-heading font-bold text-white mb-10">
-          Send Us a Message
-        </h2>
+       <h2 className="
+  text-center
+  text-3xl md:text-4xl
+  font-heading font-semibold
+  text-sky-400
+  tracking-wide
+  mb-10
+">
+  Send Us a Message
+</h2>
 
         {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-6 font-body">
