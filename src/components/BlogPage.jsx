@@ -22,7 +22,7 @@ const BlogPage = () => {
   }
 
   return (
-    <div className="min-h-screen pt-28 px-6 max-w-6xl mx-auto text-white">
+    <div className="min-h-screen pt-28 px-6 max-w-6xl mb-5 mx-auto text-white">
 
       {/* Back Button */}
       <button
