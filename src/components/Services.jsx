@@ -87,11 +87,11 @@ const Services = () => {
                 background: service.gradient,
               }}
             >
-              <img
-                src={service.logo}
-                alt={service.title}
-                className="w-[57px] h-[36px] object-contain"
-              />
+             <img
+  src={service.logo}
+  alt={service.title}
+  className="w-[65%] h-[65%] object-contain"
+/>
             </div>
 
             {/* TITLE */}
