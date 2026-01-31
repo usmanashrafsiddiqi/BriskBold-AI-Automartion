@@ -44,7 +44,7 @@ const Services = () => {
     <section className="relative">
       {/* ================= HEADING ================= */}
       <div className="text-center mb-8">
-        <h3 className="heading-primary font-heading">
+        <h3 className="heading-primary font-heading inline-block px-6 py-2  text-sky-400 border border-sky-400/40 rounded-md">
           OUR SERVICES
         </h3>
 

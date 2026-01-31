@@ -173,7 +173,7 @@ const upcomingEvents = [
 
         {/* Header */}
         <div className="text-center mb-12">
-          <h3 className="heading-primary">Events & Workshops</h3>
+          <h3 className="heading-primary inline-block px-6 py-2  text-sky-400 border border-sky-400/40 rounded-md">Events & Workshops</h3>
           <p className="paragraph-primary mt-2">
             Join Our Events
           </p>
