@@ -29,7 +29,11 @@ const BlogPage = () => {
         onClick={() => navigate(-1)}
         className="mb-6 text-sky-400 hover:underline"
       >
-        ← Back
+          <img
+              src="/leftarrow.png"
+              alt="Previous"
+              className="w-[69px] h-[80px] object-contain"
+            /> 
       </button>
 
       {/* Blog Title */}

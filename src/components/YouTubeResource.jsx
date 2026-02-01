@@ -4,8 +4,13 @@ import "./YouTubeResource.css";
 const YouTubeResource = () => {
 
   const slides = [
-    { img: "/ai1.png", title: "AI is no longer just supporting decisions", link: "https://www.youtube.com/shorts/yXPG6W7e3kE" },
-    { img: "/blog4.jpg", title: "BriskBold — Automate tasks, save time, work smarter.", link: "https://www.youtube.com/shorts/yVLDRBar7CQ" },
+   
+    { img: "/aqib.png", title: "At BriskBOLD AI & Automation,", link: "https://www.youtube.com/shorts/Vv246QXvwUc" },
+    { img: "/sadaf.png", title: "At BriskBOLD AI & Automation", link: "https://www.youtube.com/shorts/OR3e4QT2Fd8" },
+     { img: "/ai1.png", title: "AI is no longer just supporting decisions", link: "https://www.youtube.com/shorts/yXPG6W7e3kE" },
+     { img: "/blog4.jpg", title: "BriskBold — Automate tasks, save time, work smarter.", link: "https://www.youtube.com/shorts/yVLDRBar7CQ" },
+    { img: "/uzair.png", title: "At BriskBOLD AI & Automation", link: "https://www.youtube.com/shorts/WxHPjeG-dlI" },
+   
     { img: "/ai3.png", title: "Automation is the new business infrastructure", link: "https://www.youtube.com/shorts/Ah91914siuc" },
     { img: "/blog3.jpg", title: "AI Isn’t Coming. It’s Already Winning the Market. ", link: "https://www.youtube.com/shorts/uzFXG77mA38" },
     { img: "/blog5.jpg", title: "Consistency builds confidence—and that’s where trust begins.", link: "https://www.youtube.com/shorts/UmXFYgW2TsM" },

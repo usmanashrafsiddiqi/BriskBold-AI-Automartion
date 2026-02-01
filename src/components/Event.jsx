@@ -17,35 +17,16 @@ const Event = () => {
   /* -------------------- DATA -------------------- */
 const upcomingEvents = [
     {
-      title: "AI Convergence 2025: Shaping Intelligent Systems",
+      title: "BriskBOLD AI & Automation is Heading to Web Summit Qatar 2026!",
       description:
-        "Experience a full-day immersive event with innovators and engineers redefining automation, AI workflows, and smart decision systems.",
-      date: "Jun 22, 2025",
-      time: "10:00 AM – 6:00 PM",
-      location: "Online",
-      attendees: "600+",
-      image: "/event.jpg",
+        "We are excited to announce that BriskBold AI & Automation will be joining the Web Summit Qatar 2026 in Doha! With 8 years of expertise in #AI and #Automation, we are ready to showcase the next frontier of intelligent solutions.",
+      date: "Feb 02, 2026",
+      time: "4.30 PM",
+      location: "Doha",
+      attendees: "30,000+",
+      image: "/upcom1.png",
     },
-    {
-      title: "AI Future Horizons Summit 2025",
-      description:
-        "Dive into the possibilities of AI-driven transformation across industries with keynote speakers worldwide.",
-      date: "Jul 10, 2025",
-      time: "11:00 AM – 5:00 PM",
-      location: "Hybrid",
-      attendees: "950+",
-      image: "/event.jpg",
-    },
-    {
-      title: "Automation Excellence Workshop",
-      description:
-        "A focused session on workflow engineering and AI system optimization for modern teams.",
-      date: "Aug 15, 2025",
-      time: "1:00 PM – 6:00 PM",
-      location: "Online",
-      attendees: "700+",
-      image: "/event.jpg",
-    },
+   
   ];
 
   const pastEvents = [
