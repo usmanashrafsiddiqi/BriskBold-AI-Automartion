@@ -55,14 +55,14 @@ const Navbar = () => {
               <li
                 key={item.id}
                 onClick={() => handleScroll(item.id)}
-                className={`
-                  cursor-pointer px-4 py-1.5 rounded-md
-                  transition-all duration-300
-                  hover:text-sky-400
-                  font-heading font-medium uppercase
-                  text-[16.68px]
-                  ${isActive ? "text-white" : ""}
-                `}
+               className={`
+  cursor-pointer px-5 py-2 rounded-md
+  transition-all duration-300
+  hover:text-sky-400
+  font-heading font-medium uppercase
+  text-[18px]
+  ${isActive ? "text-white" : ""}
+`}
                 style={{
                   ...(isActive && {
                     background:

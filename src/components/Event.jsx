@@ -30,6 +30,17 @@ const upcomingEvents = [
   ];
 
   const pastEvents = [
+    
+    {
+      title: "Web Summit Qatar 2026",
+      description:
+        "An exciting Day 1 filled with innovation, meaningful networking, and game-changing discussions.We’re here to explore the future of digital transformation and connect with forward-thinking professionals and businesses.",
+      date: "February 02, 2026",
+      time: "4:30 PM",
+      location: "Doha",
+      attendees: "30,000+",
+      images: ["/webb1.jpg", "/webb2.jpg", "/webb3.jpg","/webb4.jpg","/webb5.jpg","/webb6.jpg","/webb7.jpg","/webb8.jpg"],
+    },
     {
       title: "Web Summit Qatar 2025",
       description:
